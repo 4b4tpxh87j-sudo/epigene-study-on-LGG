@@ -97,7 +97,6 @@ print(f"R² 分数 (解释性评分): {r2:.4f}")
 plt.figure(figsize=(8, 8))
 
 # 提取生存状态列用于着色
-# 假设 Y_test 的第二列是状态（0为存活/截断，1为死亡）
 Y_test_status = Y_test.iloc[:, 1]
 
 # 使用 c 参数指定颜色来源，cmap 指定色板（如 'RdYlGn_r'：红色代表死亡，绿色代表存活）
