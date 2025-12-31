@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
-h5_path = '/home/luhc/epigenetic/epigenetic/filtered_LGG_train_test_data.h5'
+h5_path = 'epigenetic/filtered_LGG_train_test_data.h5'
 
 try:
     X_train_filtered = pd.read_hdf(h5_path, key='X_train_filtered')
