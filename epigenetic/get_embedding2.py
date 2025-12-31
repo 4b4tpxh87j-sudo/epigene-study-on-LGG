@@ -4,11 +4,11 @@ from sklearn.feature_selection import VarianceThreshold
 import numpy as np
 try:
     merged_data = pd.read_hdf(
-        '/home/luhc/epigenetic/epigenetic/lgg_merged_data', 
+        'epigenetic/lgg_merged_data', 
         key='lgg_merged_data' 
     )
 except FileNotFoundError:
-    print("错误：未找到文件。请检查路径 '/home/luhc/epigenetic/aligned_LGG_data.h5' 是否正确。")
+    print("错误：未找到文件。请检查路径 'epigenetic/aligned_LGG_data.h5' 是否正确。")
 
 print(merged_data.head())
 
@@ -44,7 +44,7 @@ print("最终测试集特征形状 (X_test_filtered):", X_test_filtered.shape)
 # 假设您在之前的步骤中已经定义了 X_train_filtered, X_test_filtered, Y_train, Y_test
 # 我们将它们保存在一个新的 HDF5 文件中，方便后续读取
 
-output_h5_path = '/home/luhc/epigenetic/epigenetic/filtered_LGG_train_test_data.h5'
+output_h5_path = 'epigenetic/filtered_LGG_train_test_data.h5'
 
 #以写入模式 ('w') 打开文件，如果文件存在则覆盖
 with pd.HDFStore(output_h5_path, mode='w') as store:
