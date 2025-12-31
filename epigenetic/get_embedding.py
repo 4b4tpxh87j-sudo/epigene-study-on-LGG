@@ -2,12 +2,12 @@ import pandas as pd
 import numpy as np
 
 # 1. 加载甲基化矩阵 (通常是TSV，使用 read_csv 配合 sep='\t')
-# 注意：大型文件可能需要几分钟加载，且需要大量内存
-methyl_df = pd.read_csv('/home/luhc/epigenetic/epigenetic/TCGA-LGG.methylation450.tsv.gz.tsv'
+# 注意：这一步打开时间可能会很长
+methyl_df = pd.read_csv('epigenetic/TCGA-LGG.methylation450.tsv.gz.tsv'
 , sep='\t', index_col=0,compression='gzip')
 
 # 2. 加载临床数据
-clinical_df = pd.read_csv('/home/luhc/epigenetic/epigenetic/TCGA-LGG.survival.tsv.gz.tsv', sep='\t',compression='gzip')
+clinical_df = pd.read_csv('epigenetic/TCGA-LGG.survival.tsv.gz.tsv', sep='\t',compression='gzip')
 
 # 查看前几行和数据形状
 meth_transposed=methyl_df.T
