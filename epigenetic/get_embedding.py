@@ -29,7 +29,7 @@ print("形状:", merged_data.shape)
 print("现在每一行是一个患者，列包含CpG探针值和临床数据。")
 print(merged_data.iloc[:, -5:].head())
 merged_data.to_hdf(
-    '/home/luhc/epigenetic/epigenetic/lgg_merged_data', 
+    'epigenetic/lgg_merged_data', 
     key='lgg_merged_data', # 给数据起一个名字
     mode='w'               # 'w' 表示写入 (如果文件已存在会覆盖)
 )
