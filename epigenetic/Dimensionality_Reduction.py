@@ -112,7 +112,6 @@ min_val = all_vals.min()
 plt.plot([min_val, max_val], [min_val, max_val], 'r--', lw=2, label='Perfect Prediction')
 
 # 添加图例说明颜色意义
-# 如果你的数据中 1 是死亡，0 是存活，这里的句柄会显示对应关系
 handles, labels = scatter.legend_elements()
 legend1 = plt.legend(handles, ['Alive/Censored (0)', 'Deceased (1)'], 
                     loc="upper left", title="Status")
